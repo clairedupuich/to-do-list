@@ -17,14 +17,14 @@ export class HomePage {
   }
 
   myTask = '';
-  myTaskList = [];
+  taskList = [];
   ngOnInit() {
   }
   async showPrompt() {
     const prompt = await this.alertCtrl.create({
       inputs: [
         {
-          myTask : 'name',
+          name: 'name',
           type: 'text',
           placeholder: 'Indiquez votre tâche'
         },
@@ -44,14 +44,14 @@ export class HomePage {
     await prompt.present();
   }
   addTask() {
-    if (this.myTask.length > 0) {
-      let task = this.myTask;
-      this.myTaskList.push(task);
-      this.myTask = '';
+    if (this.taskName.length > 0) {
+      let task = this.taskName;
+      this.taskList.push(task);
+      this.taskName = '';
     }
   }
   deleteTask(index) {
-    this.myTaskList.splice(index, 1);
+    this.taskList.splice(index, 1);
   }
   
 }

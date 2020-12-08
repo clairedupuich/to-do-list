@@ -46,12 +46,12 @@ export class HomePage {
   addTask() {
     if (this.myTask.length > 0) {
       let task = this.myTask;
-      this.myTaskList.push(task);
+      this.taskList.push(task);
       this.myTask = '';
     }
   }
   deleteTask(index) {
-    this.myTaskList.splice(index, 1);
+    this.taskList.splice(index, 1);
   }
   
 }

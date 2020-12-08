@@ -51,7 +51,7 @@ export class HomePage {
     }
   }
   deleteTask(index) {
-    this.myTaskList.splice(index, 1);
+    this.taskList.splice(index, 1);
   }
   
 }
